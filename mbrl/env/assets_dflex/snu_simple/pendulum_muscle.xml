@@ -1,0 +1,7 @@
+<Muscle>
+    <Unit name="actuator1" f0="1000.000000" lm="1.200000" lt="0.200000" pen_angle="0.000000" lmax="-0.100000">
+        <Waypoint body="Link1" p="0. -0.1 0.05 " />
+        <Waypoint body="Link2" p="0. -0.2 0.05 " />
+        <Waypoint body="Link2" p="0. -0.3 0.05 " />
+    </Unit>
+</Muscle>

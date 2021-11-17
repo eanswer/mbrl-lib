@@ -1,0 +1,23 @@
+<Skeleton name="Pendulum">
+    <Node name="Link1" parent="None" >
+        <Body type="Box" mass="10.0" size="0.1 0.2 0.1" contact="Off" color="0.6 0.6 1.5 1.0" obj="Pelvis.obj">
+            <Transformation linear="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0" translation="0.0 -0.1 0"/>
+        </Body>
+        <!-- <Joint type="Fixed" axis ="1.0 0.0 0.0" bvh="Character1_Hips" lower="-2.0" upper="2.0">
+            <Transformation linear="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0" translation="0.0 0.0 0.0 "/>
+        </Joint> -->
+        <Joint type="Revolute" axis ="1.0 0.0 0.0" bvh="Character1_Hips" lower="-2.0" upper="2.0">
+            <Transformation linear="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0" translation="0.0 0.0 0.0 "/>
+        </Joint>
+    </Node>
+
+    <Node name="Link2" parent="Link1" >
+        <Body type="Box" mass="10.0" size="0.1 0.2 0.1" contact="Off" color="0.6 0.6 1.5 1.0" obj="L_Femur.obj">
+            <Transformation linear="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0" translation="0. -0.3 0"/>
+        </Body>
+        <Joint type="Revolute" axis ="1.0 0.0 0.0" bvh="Character1_LeftUpLeg" lower="-2." upper="2.0">
+            <Transformation linear="1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0" translation="0.0 -0.2 0.0"/>
+        </Joint>
+    </Node>
+
+</Skeleton>

@@ -84,6 +84,10 @@ def _legacy_make_env(
             env = mbrl.env.mujoco_envs.AntTruncatedObsEnv()
             term_fn = mbrl.env.termination_fns.ant
             reward_fn = None
+        elif cfg.overrides.env == "dflex_ant":
+            env = mbrl.env.mujoco_envs.DflexAntEnv()
+            term_fn = mbrl.env.termination_fns.dflex_ant
+            reward_fn = None
         elif cfg.overrides.env == "humanoid_truncated_obs":
             env = mbrl.env.mujoco_envs.HumanoidTruncatedObsEnv()
             term_fn = mbrl.env.termination_fns.ant

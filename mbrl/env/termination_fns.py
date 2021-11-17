@@ -84,6 +84,15 @@ def ant(act: torch.Tensor, next_obs: torch.Tensor):
     done = done[:, None]
     return done
 
+def dflex_ant(act: torch.Tensor, next_obs: torch.Tensor):
+    assert len(next_obs.shape) == 2
+
+    x = next_obs[:, 0]
+    not_done = torch.isfinite(next_obs).all(-1) * (x >= 0.27)
+
+    done = ~not_done
+    done = done[:, None]
+    return done
 
 def humanoid(act: torch.Tensor, next_obs: torch.Tensor):
     assert len(next_obs.shape) == 2
